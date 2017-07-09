@@ -12,13 +12,13 @@ public class DevEnvironment extends Environment
     @Value("${db_driver_class}")
     private String dbDriverClass;
 
-    @Value("${dev.db_url}")
+    @Value("${JDBC_DATABASE_URL:dev.db_url}")
     private String dbUrl;
 
-    @Value("${dev.db_user}")
+    @Value("${JDBC_DATABASE_USERNAME:dev.db_user}")
     private String dbUser;
 
-    @Value("${dev.db_password}")
+    @Value("${JDBC_DATABASE_PASSWORD:dev.db_password}")
     private String dbPassword;
 
     @Value("${dev.images_dir}")
