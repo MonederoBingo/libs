@@ -13,7 +13,7 @@ public class FunctionalTestEnvironment extends Environment
     @Value("${db_savepoint_driver_class}")
     private String dbDriverClass;
 
-    @Value("${functional_test.db_url}")
+    @Value("${JDBC_DATABASE_URL:functional_test.db_url}")
     private String dbUrl;
 
     @Value("${functional_test.db_user}")
