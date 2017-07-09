@@ -31,7 +31,7 @@ public class FunctionalTestEnvironment extends Environment
     @Override
     public String getDatabasePath()
     {
-        return dbDriver + dbUrl;
+        return dbUrl;
     }
 
     public String getDatabaseDriverClass()
