@@ -13,13 +13,13 @@ public class FunctionalTestEnvironment extends Environment
     @Value("${db_savepoint_driver_class}")
     private String dbDriverClass;
 
-    @Value("${JDBC_DATABASE_URL:functional_test.db_url}")
+    @Value("${functional_test.db_url}")
     private String dbUrl;
 
-    @Value("${JDBC_DATABASE_USERNAME:functional_test.db_user}")
+    @Value("${functional_test.db_user}")
     private String dbUser;
 
-    @Value("${JDBC_DATABASE_PASSWORD:functional_test.db_password}")
+    @Value("${functional_test.db_password}")
     private String dbPassword;
 
     @Value("${functional_test.images_dir}")

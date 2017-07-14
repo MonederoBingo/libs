@@ -76,7 +76,7 @@ public class ContextFilterTest
     public void shouldInitializeProdEnvironmentContext() throws IOException, ServletException
     {
         // given
-        given(httpServletRequest.getServerName()).willReturn("services.monederobingo.com");
+        given(httpServletRequest.getServerName()).willReturn("prod.monederobingo.com");
 
         // when
         contextFilter.doFilter(httpServletRequest, httpServletResponse, filterChain);
@@ -89,7 +89,7 @@ public class ContextFilterTest
     public void shouldInitializeUATEnvironmentContext() throws IOException, ServletException
     {
         // given
-        given(httpServletRequest.getServerName()).willReturn("test.services.monederobingo.com");
+        given(httpServletRequest.getServerName()).willReturn("uat.services.monederobingo.com");
 
         // when
         contextFilter.doFilter(httpServletRequest, httpServletResponse, filterChain);

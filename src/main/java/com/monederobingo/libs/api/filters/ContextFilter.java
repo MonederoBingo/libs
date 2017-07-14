@@ -82,16 +82,18 @@ public class ContextFilter extends GenericFilterBean
 
     private Environment getEnvironment(HttpServletRequest request)
     {
-        switch (request.getServerName())
+        if (request.getServerName().startsWith("prod."))
         {
-            case "services.monederobingo.com":
-                return environmentFactory.getProdEnvironment();
-            case "test.services.monederobingo.com":
-                return environmentFactory.getUatEnvironment();
-            case "test.localhost":
-                return environmentFactory.getFunctionalTestEnvironment();
-            default:
-                return environmentFactory.getDevEnvironment();
+            return environmentFactory.getProdEnvironment();
         }
+        if (request.getServerName().startsWith("uat."))
+        {
+            return environmentFactory.getUatEnvironment();
+        }
+        if (request.getServerName().startsWith("test.localhost"))
+        {
+            return environmentFactory.getFunctionalTestEnvironment();
+        }
+        return environmentFactory.getDevEnvironment();
     }
 }
