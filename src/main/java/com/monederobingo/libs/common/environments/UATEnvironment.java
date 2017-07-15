@@ -12,13 +12,13 @@ public class UATEnvironment extends Environment
     @Value("${db_driver_class}")
     private String dbDriverClass;
 
-    @Value("${uat.db_url}")
+    @Value("${JDBC_DATABASE_URL}")
     private String dbUrl;
 
-    @Value("${uat.db_user}")
+    @Value("${JDBC_DATABASE_USERNAME}")
     private String dbUser;
 
-    @Value("${uat.db_password}")
+    @Value("${JDBC_DATABASE_PASSWORD}")
     private String dbPassword;
 
     @Value("${uat.client_url}")
@@ -30,7 +30,7 @@ public class UATEnvironment extends Environment
     @Override
     public String getDatabasePath()
     {
-        return dbDriver + dbUrl;
+        return dbUrl;
     }
 
     public String getDatabaseDriverClass()
