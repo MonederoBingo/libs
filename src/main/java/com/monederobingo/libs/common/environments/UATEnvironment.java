@@ -24,6 +24,9 @@ public class UATEnvironment extends Environment
     @Value("${uat.client_url}")
     private String clientUrl;
 
+    @Value("${db_test_schema}")
+    private String schema;
+
     @Override
     public String getDatabasePath()
     {
@@ -48,6 +51,12 @@ public class UATEnvironment extends Environment
     public String getImageDir()
     {
         return System.getenv("OPENSHIFT_DATA_DIR") + "images/uat/";
+    }
+
+    @Override
+    public String getSchema()
+    {
+        return schema;
     }
 
     public String getClientUrl()

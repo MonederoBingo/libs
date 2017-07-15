@@ -28,6 +28,9 @@ public class FunctionalTestEnvironment extends Environment
     @Value("${functional_test.client_url}")
     private String clientUrl;
 
+    @Value("${db_test_schema}")
+    private String schema;
+
     @Override
     public String getDatabasePath()
     {
@@ -52,6 +55,12 @@ public class FunctionalTestEnvironment extends Environment
     public String getImageDir()
     {
         return imagesDir;
+    }
+
+    @Override
+    public String getSchema()
+    {
+        return schema;
     }
 
     public String getClientUrl()

@@ -25,6 +25,9 @@ public class ProdEnvironment extends Environment
     @Value("${prod.client_url}")
     private String clientUrl;
 
+    @Value("${db_schema}")
+    private String schema;
+
     @Override
     public String getDatabasePath()
     {
@@ -49,6 +52,11 @@ public class ProdEnvironment extends Environment
     public String getImageDir()
     {
         return System.getenv("OPENSHIFT_DATA_DIR") + "images/prod/";
+    }
+
+    @Override public String getSchema()
+    {
+        return schema;
     }
 
     public String getClientUrl()

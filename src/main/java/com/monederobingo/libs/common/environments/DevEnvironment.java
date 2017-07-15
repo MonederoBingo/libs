@@ -27,6 +27,9 @@ public class DevEnvironment extends Environment
     @Value("${dev.client_url}")
     private String clientUrl;
 
+    @Value("${db_schema}")
+    private String schema;
+
     @Override
     public String getDatabasePath()
     {
@@ -56,6 +59,11 @@ public class DevEnvironment extends Environment
     public String getImageDir()
     {
         return imagesDir;
+    }
+
+    @Override public String getSchema()
+    {
+        return schema;
     }
 
     public String getClientUrl()

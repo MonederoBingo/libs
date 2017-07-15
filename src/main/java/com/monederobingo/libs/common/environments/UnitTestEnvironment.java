@@ -27,6 +27,9 @@ public class UnitTestEnvironment extends Environment
     @Value("${unit_test.client_url}")
     private String clientUrl;
 
+    @Value("${db_test_schema}")
+    private String schema;
+
     public UnitTestEnvironment()
     {
     }
@@ -69,6 +72,11 @@ public class UnitTestEnvironment extends Environment
     public String getImageDir()
     {
         return imagesDir;
+    }
+
+    @Override public String getSchema()
+    {
+        return schema;
     }
 
     public String getClientUrl()

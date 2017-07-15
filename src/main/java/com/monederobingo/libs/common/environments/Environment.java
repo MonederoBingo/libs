@@ -12,6 +12,8 @@ public abstract class Environment {
 
     public abstract String getImageDir();
 
+    public abstract String getSchema();
+
     @Deprecated
     public abstract String getClientUrl();
 }
