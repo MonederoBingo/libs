@@ -63,6 +63,11 @@ public class FunctionalTestEnvironment extends Environment
         return schema;
     }
 
+    @Override public String getURIPrefix()
+    {
+        return "test.";
+    }
+
     public String getClientUrl()
     {
         return clientUrl;

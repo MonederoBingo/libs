@@ -14,6 +14,8 @@ public abstract class Environment {
 
     public abstract String getSchema();
 
+    public abstract String getURIPrefix();
+
     @Deprecated
     public abstract String getClientUrl();
 }

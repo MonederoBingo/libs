@@ -66,6 +66,11 @@ public class DevEnvironment extends Environment
         return schema;
     }
 
+    @Override public String getURIPrefix()
+    {
+        return "";
+    }
+
     public String getClientUrl()
     {
         return clientUrl;

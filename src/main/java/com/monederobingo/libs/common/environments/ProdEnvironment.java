@@ -59,6 +59,11 @@ public class ProdEnvironment extends Environment
         return schema;
     }
 
+    @Override public String getURIPrefix()
+    {
+        return "prod.";
+    }
+
     public String getClientUrl()
     {
         return clientUrl;

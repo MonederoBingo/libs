@@ -59,6 +59,11 @@ public class UATEnvironment extends Environment
         return schema;
     }
 
+    @Override public String getURIPrefix()
+    {
+        return "uat.";
+    }
+
     public String getClientUrl()
     {
         return clientUrl;
