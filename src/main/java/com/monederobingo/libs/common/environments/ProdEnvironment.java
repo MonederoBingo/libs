@@ -13,13 +13,13 @@ public class ProdEnvironment extends Environment
     @Value("${db_driver_class}")
     private String dbDriverClass;
 
-    @Value("${prod.db_url}")
+    @Value("${JDBC_DATABASE_URL}")
     private String dbUrl;
 
-    @Value("${prod.db_user}")
+    @Value("${JDBC_DATABASE_USERNAME}")
     private String dbUser;
 
-    @Value("${prod.db_password}")
+    @Value("${JDBC_DATABASE_PASSWORD}")
     private String dbPassword;
 
     @Value("${prod.client_url}")
